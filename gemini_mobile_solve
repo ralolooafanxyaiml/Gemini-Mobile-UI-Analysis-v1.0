@@ -1,0 +1,9 @@
+try {
+     renderRichMarkdown(chatContent)
+} catch (e: Excepton) {
+Log.e("GeminiRender", "Complex markdown failed, falling back to plain text", e)
+renderPlainText(chatContent)
+showToast("Some formatting could not be displayed")
+} finally {
+    hideLoadingSpinner()
+}
